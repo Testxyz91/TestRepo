@@ -1,0 +1,15 @@
+trigger:
+- main
+
+pool: 
+  vmImage: ubuntu-latest
+
+jobs:
+- job: PreWork
+  steps:
+  - script: echo My first job
+
+- job: PostWork
+  pool: windows-latest
+  steps:
+  - script: echo My second job
